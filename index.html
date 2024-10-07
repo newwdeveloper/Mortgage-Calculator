@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mortage Calculator</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left" style="margin: 0px; padding-top: 30px">
+        <div class="head">
+          <h2>Mortage Calculator</h2>
+          <button id="clear">Clear All</button>
+        </div>
+        <div class="amount">
+          <p>Mortage Amount</p>
+          <input
+            type="number"
+            id="money"
+            placeholder="Enter Your Amount......"
+            style="border: 0"
+            min="1"
+          />
+          <i class="fa-solid fa-indian-rupee-sign" id="rs"></i>
+        </div>
+        <div class="side">
+          <div class="year-interest">
+            <p>Mortgage Term</p>
+            <div class="input-container" id="year">
+              <input type="number" min="1" class="year" />
+              <p>Years</p>
+            </div>
+          </div>
+
+          <div class="boxes">
+            <p>Interest rate</p>
+            <div class="input-container">
+              <input type="number" min="1" id="interestPer" />
+              <p>%</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mortage-type">
+          <div class="checkbox1">
+            <input type="checkbox" id="repayment" />
+            <p>Repayment</p>
+          </div>
+          <div class="checkbox2">
+            <input type="checkbox" id="interest" />
+            <p>Interest Only</p>
+          </div>
+        </div>
+        <div class="btn">
+          <button id="submit" disabled>Calculate Repayment</button>
+        </div>
+      </div>
+      <div class="right" style="margin: 0px">
+        <h1 style="font-size: 2.8rem">Result Shown Here</h1>
+        <p>
+          Complete the form and click calculate Repayment button to see what
+          will be your interest and repayment amount
+        </p>
+        <div class="result">
+          <div class="loan">
+            <p>LOAN AMOUNT</p>
+          </div>
+          <div class="intShow">
+            <p>INTEREST VALUE</p>
+          </div>
+          <div class="totRepay">
+            <p>TOTAL REPAYMENT</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

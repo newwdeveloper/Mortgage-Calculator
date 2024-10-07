@@ -1,0 +1,246 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: azure;
+  font-size: 15px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Allow the elements to wrap on smaller screens */
+  width: 100%;
+}
+
+.container > div {
+  flex: 1 1 300px; /* Allow elements to grow and shrink with a minimum width */
+  margin: 1rem; /* Add margin for spacing between elements */
+}
+
+img {
+  margin-top: 20px;
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Limit maximum width */
+}
+
+.left {
+  height: auto; /* Change to auto to allow dynamic height */
+  padding: 5%;
+  background-color: rgb(230, 226, 219);
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: space-between; /* Adjust space between elements */
+}
+
+.head h2 {
+  font-size: 2.8rem;
+}
+
+.amount {
+  position: relative;
+}
+
+.amount p {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: grey;
+}
+
+.amount input {
+  height: 3rem; /* Fixed height */
+  width: calc(106% - 30px); /* Adjust width to account for padding */
+  padding-left: 30px;
+  font-size: 1.2rem;
+  border: 1px solid gray; /* Add border for better visibility */
+  border-radius: 10px;
+}
+
+#rs {
+  position: absolute;
+  left: 5px; /* Position it slightly inside the input */
+  top: 75%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: rgb(0, 0, 0);
+}
+
+.side {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px; /* Adjust the gap between sections */
+}
+
+.year-interest,
+.boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between label and input */
+}
+
+.year-interest p {
+  font-size: 1.2rem;
+  color: gray;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.boxes p {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+.input-container input {
+  width: 100%;
+  padding-right: 4rem; /* Space for the "Years" or "%" label */
+  height: 3rem;
+  font-size: 1.2rem;
+  border: 1px solid gray; /* Add border for visibility */
+  border-radius: 15px;
+}
+
+.input-container p {
+  position: absolute;
+  top: -15%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: gray;
+  pointer-events: none;
+}
+.mortage-type {
+  display: flex;
+  justify-content: space-between;
+}
+.mortage-type p {
+  font-size: 1.3rem;
+  color: gray;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.boxes p {
+  font-size: 1.2rem;
+  color: gray;
+}
+
+.checkbox1,
+.checkbox2 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 20px 10px;
+  border-radius: 15px;
+  flex-direction: row;
+}
+
+.checkbox1 p {
+  margin-top: 10px;
+}
+.checkbox2 p {
+  margin-top: 10px;
+}
+
+.btn {
+  position: relative;
+  width: 100%;
+}
+
+#submit {
+  height: 3rem;
+  width: 100%;
+  font-size: 1.3rem;
+  border: 0;
+  background-color: green;
+  border-radius: 15px;
+  color: white;
+  cursor: pointer;
+}
+
+#submit:disabled {
+  background-color: rgb(148, 177, 148);
+  cursor: not-allowed;
+}
+
+.right {
+  background-color: rgb(214, 255, 250);
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem; /* Add padding for spacing */
+}
+
+.right p {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 1.2rem;
+  color: gray;
+}
+
+.result {
+  width: 70%;
+  background-color: aliceblue;
+  height: auto; /* Change to auto for dynamic height */
+  margin: 20px auto; /* Centering the container */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.intShow,
+.loan,
+.totRepay {
+  border: 1px solid rgb(238, 228, 228);
+  width: 100%;
+  height: 3rem;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+#clear {
+  position: absolute;
+  height: 2rem;
+  top: 5%;
+  right: 5%;
+  background-color: red;
+  border-radius: 15px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack the left and right sections on smaller screens */
+  }
+
+  .left,
+  .right {
+    width: 100%; /* Full width for mobile */
+  }
+
+  .right p {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  #submit {
+    font-size: 1.1rem; /* Adjust button size */
+  }
+}
